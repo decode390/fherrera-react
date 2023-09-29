@@ -1,12 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
 import './index.css'
+import { appRouter } from './app-router';
 
 /* import "./08-useReducer/intro-reducer"; */
-import { TodoApp } from './08-useReducer/TodoApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <TodoApp />
+    <RouterProvider router={appRouter}/>
   // </React.StrictMode>,
 )
