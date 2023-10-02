@@ -1,8 +1,7 @@
 import {Navigate, createBrowserRouter} from 'react-router-dom';
 import { MainApp, HomePage, LoginPage, AboutPage } from './09-useContext';
-import ErrorPage from './error-page';
 
-export const appRouter = createBrowserRouter([
+export const routerConfig = [
   {
     path: "/",
     element: <MainApp />,
@@ -26,4 +25,4 @@ export const appRouter = createBrowserRouter([
 
     ]
   },
-]);
+];

@@ -14,8 +14,10 @@ export const Quote = ({quoteItem}) => {
       className="blockquote text-end"
       style={{display: 'flex'}}
     >
-      <p>Quote: {quote}</p>
-      <footer className="blockquote-footer">Author: {author}</footer>
+      <p role="quote">Quote: {quote}</p>
+      <footer className="blockquote-footer" aria-label="author">
+        Author: {author}
+      </footer>
     </blockquote>
   )
 }

@@ -5,12 +5,13 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import './index.css'
-import { appRouter } from './app-router';
+import { routerConfig } from './router-config';
 
 /* import "./08-useReducer/intro-reducer"; */
 
+export const router = createBrowserRouter(routerConfig);
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
-    <RouterProvider router={appRouter}/>
+    <RouterProvider router={router}/>
   // </React.StrictMode>,
 )

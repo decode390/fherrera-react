@@ -6,10 +6,10 @@ export const useForm = (initialForm = {username: ''}) => {
 
   const onInputChange = (evt) => {
     const {name, value} = evt.target;
-    setForm({
-      ...form,
+    setForm((currentForm) => ({
+      ...currentForm,
       [name] : value
-    })
+    }));
   }
 
   const onResetForm = () => setForm(initialForm);
