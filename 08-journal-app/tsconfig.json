@@ -19,18 +19,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
-    /* Custom */
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*", "./dist/*", ""],
-      "@heroes/*": ["src/heroes/*"],
-      "@auth/*": ["src/auth/*"],
-      "@ui/*": ["src/ui/*"],
     },
     "esModuleInterop": true,
-
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

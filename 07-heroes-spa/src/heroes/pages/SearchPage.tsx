@@ -2,7 +2,7 @@ import { HeroCard } from '@heroes/components'
 import { getHeroesByName } from '@heroes/helpers';
 import { useForm } from '@/shared/hooks/useForm'
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 export const SearchPage = () => {
   const [params] = useSearchParams();
@@ -23,7 +23,6 @@ export const SearchPage = () => {
     navigate(`?q=${searchText}`);
   }
 
-  const toggleImg = useState();
 
   return (
     <>
@@ -34,7 +33,7 @@ export const SearchPage = () => {
         <div className="col-5">
           <h4>Searching</h4>
           <hr/>
-          <form onSubmit={onFormSubmit}>
+          <form aria-label='search' onSubmit={onFormSubmit}>
             <input 
               type="text"
               placeholder="Search a hero"
@@ -63,7 +62,7 @@ export const SearchPage = () => {
             Search a hero
           </div>
 
-          <div 
+          <div aria-label='no-hero-alert'
             className="alert alert-danger animate__animated animate__fadeIn"
             style={{display: showError ? '' : 'none'}}
           >

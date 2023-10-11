@@ -5,7 +5,7 @@ export const HeroCard = ({hero}: {hero: HeroModel}) => {
   const {
     id, 
     superhero, 
-    publisher,
+    /* publisher, */
     alter_ego, 
     first_appearance, 
     characters

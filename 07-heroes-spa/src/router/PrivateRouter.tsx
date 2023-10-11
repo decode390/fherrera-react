@@ -12,7 +12,6 @@ export const PrivateRouter = ({children}: any) => {
     const {pathname, search} = location;
     localStorage.setItem('lastPath', `${pathname}${search}`)
   }, [location]);
-  
 
   return (authState.logged)
     ? <>{ children }</>

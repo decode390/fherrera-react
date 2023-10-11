@@ -3,8 +3,10 @@ import { AuthActions, AuthState } from "@auth/models/Reducer";
 
 
 export const authReducer = 
-( state: AuthState, action: ActionReducerModel<AuthActions> ): AuthState => 
+( state: AuthState, action: ActionReducerModel<AuthActions> | null ): AuthState => 
 {
+  if (!action) return state;
+
   switch (action.type) {
     case AuthActions.Login:
       return {

@@ -13,8 +13,8 @@ export class AuthState {
   }
 
   constructor(
-    public logged: boolean,
-    public name: string
+    public logged: boolean = false,
+    public name: string = ''
   ) {}
 }
 
